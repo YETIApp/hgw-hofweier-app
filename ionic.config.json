@@ -1,0 +1,7 @@
+{
+  "name": "HGW Hofweier",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

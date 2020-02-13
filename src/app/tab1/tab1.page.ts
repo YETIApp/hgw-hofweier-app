@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Plugins } from '@capacitor/core';
+const { Browser } = Plugins;
 
 @Component({
   selector: 'app-tab1',
@@ -6,7 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  url = 'https://akhromieiev.com';
+  constructor() {  }
 
-  constructor() {}
+
+  async openURL(url) {
+    await Browser.open({ 'url': url });
+  }
 
 }

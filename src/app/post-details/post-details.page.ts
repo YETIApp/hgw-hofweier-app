@@ -20,13 +20,7 @@ export class PostDetailsPage implements OnInit {
 
   getPostDetails(id) {
     const route = this.url + 'wp-json/wp/v2/' + `posts/${id}?_embed`
-    return this.http.get(route).pipe(
-      map(post => {
-        post['media_url'] = post['_embedded']['wp:featuredmedia'][0]['media_details'].sizes['medium'].source_url;
-        console.log(post);
-        return post;
-      })
-    )
+    return this.http.get(route).pipe()
   }
 
 

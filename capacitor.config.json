@@ -1,5 +1,5 @@
 {
-  "appId": "de.hgw-hofweier.hgwhofweier",
+  "appId": "de.hgwhofweier.hgwhofweier",
   "appName": "HGW Hofweier",
   "bundledWebRuntime": false,
   "npmClient": "npm",

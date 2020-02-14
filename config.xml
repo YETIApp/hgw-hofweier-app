@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="de.hgwhofweier.hgwhofweier" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="de.hgw-hofweier.hgwhofweier" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>HGW Hofweier</name>
     <description>HGW Hofweier App</description>
-    <author email="hi@ionicframework.com" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <author email="admin@yeti-studios.io" href="https//hgw-hofweier.de/">HGW Hofweier</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="*" />

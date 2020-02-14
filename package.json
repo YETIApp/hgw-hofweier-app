@@ -66,7 +66,8 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-inappbrowser": {},
-      "cordova-plugin-advanced-http": {}
+      "cordova-plugin-advanced-http": {},
+      "cordova-plugin-whitelist": {}
     }
   }
 }

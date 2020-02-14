@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./post.page.scss'],
 })
 export class PostPage {
-  url: string = 'https://212.227.8.128/'
+  url: string = 'https://hgw-hofweier.de/'
   items: any = []
   page: any = 1;
   constructor(

@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "de.hgw-hofweier.hgwhofweier",
   "appName": "HGW Hofweier",
   "bundledWebRuntime": false,
   "npmClient": "npm",

@@ -26,7 +26,11 @@
         <img *ngIf="item.featured_image_urls && item.featured_image_urls.thumbnail"
           src="{{item.featured_image_urls.thumbnail}}">
         <img *ngIf="!item.featured_image_urls || !item.featured_image_urls.thumbnail" src="assets/default.png">
+        <img [src]="item.media_url">
+        <img src="item.media_url">
+        <img [src]="item.featured_media_url">
       </ion-avatar>
+
       <div>
         <h2 class="ion-text-center" *ngIf="item.title && item.title.rendered" [innerHTML]="item.title.rendered"></h2>
 

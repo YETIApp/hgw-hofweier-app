@@ -1,41 +1,27 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ergebnisse
+      Livestream
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Ergebnisse</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+  <iframe
+    src="https://player.twitch.tv/?channel=hgwhofweier&muted=true"
+    height="250"
+    width="100%"
+    frameborder="0"
+    scrolling="no"
+    allowfullscreen="true">
+</iframe>
 
-  <ion-list *ngFor="let item of data" >
-    <ion-item-divider sticky text-center center>
-      <ion-label text-center> 
-        <strong>{{item.date}}</strong>
-      </ion-label>
-    </ion-item-divider>
-    <ion-item (click)="openURL(url)">
-      <ion-label text-center>
-        <h3 class="ion-text-center"> 
-          <strong> HGW Hofweier </strong> <img class="img" src="https://hgw-hofweier.de/wp-content/uploads/2019/11/11954582_1098740510155914_1585979580200394067_n-2-1.png" align="center">
-          &nbsp;
-          <b>18:30</b>
-          &nbsp;
-          <img class="img" src="https://handball-sinzheim.de/wp-content/uploads/2019/08/bsv-logo-e1566888193546.png" align="center"> BSV Sinzheim
-        </h3>
-        <p class="ion-text-center">
-          Hohbeghalle &mdash; <b>Südbadenliga</b>
-        </p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
-
-
-
- 
+<iframe frameborder="0"
+        scrolling="no"
+        id="chat_embed"
+        src="https://www.twitch.tv/embed/hgwhofweier/chat"
+        height="500"
+        width="100%">
+</iframe>
 </ion-content>

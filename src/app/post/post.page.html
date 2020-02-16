@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content padding text-center>
-  
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">News</ion-title>
@@ -18,28 +18,21 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <ion-list class="post-list">
+  
 
-    <ion-item *ngFor="let item of items" (click)="goToPostDetails(item)">
-
-      <ion-avatar item-left *ngIf="item.featured_image_urls">
-        <img *ngIf="item.featured_image_urls && item.featured_image_urls.thumbnail"
+<ion-card *ngFor="let item of items" (click)="goToPostDetails(item)" class="post-list"> 
+  <img *ngIf="item.featured_image_urls && item.featured_image_urls.thumbnail"
           src="{{item.featured_image_urls.thumbnail}}">
-        <img *ngIf="!item.featured_image_urls || !item.featured_image_urls.thumbnail" src="assets/default.png">
-        <img [src]="item.media_url">
-        <img src="item.media_url">
-        <img [src]="item.featured_media_url">
-      </ion-avatar>
+          <img *ngIf="!item.featured_image_urls || !item.featured_image_urls.thumbnail" src="/assets/bilder/herren1.jpg">
+    <ion-card-header ios hydrated header-translucent-ios>
+      <!--<ion-card-subtitle>Card Subtitle</ion-card-subtitle>-->
+      <ion-card-title><h2 class="ion-text-center" *ngIf="item.title && item.title.rendered" [innerHTML]="item.title.rendered"></h2></ion-card-title>
+    </ion-card-header>
 
-      <div>
-        <h2 class="ion-text-center" *ngIf="item.title && item.title.rendered" [innerHTML]="item.title.rendered"></h2>
-
-        <p class="ion-text-center" *ngIf="item.excerpt && item.excerpt.rendered" [innerHTML]="item.excerpt.rendered"></p>
-      </div>
-
-    </ion-item>
-
-  </ion-list>
+    <ion-card-content>
+      <p class="ion-text-center" *ngIf="item.excerpt && item.excerpt.rendered" [innerHTML]="item.excerpt.rendered"></p>
+    </ion-card-content>
+  </ion-card>
 
   <ion-infinite-scroll (ionInfinite)="loadMore($event)">
     <ion-infinite-scroll-content></ion-infinite-scroll-content>

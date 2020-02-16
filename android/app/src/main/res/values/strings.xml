@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">HGW Hofweier</string>
-    <string name="title_activity_main">HGW Hofweier</string>
-    <string name="package_name">de.hgwhofweier.hgwhofweier</string>
-    <string name="custom_url_scheme">de.hgwhofweier.hgwhofweier</string>
-</resources>

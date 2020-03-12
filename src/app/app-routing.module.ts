@@ -14,6 +14,18 @@ const routes: Routes = [
     path: 'post-details/:postId',
     loadChildren: () => import('./post-details/post-details.module').then( m => m.PostDetailsPageModule)
   },
+  {
+    path: 'erstemannschaft',
+    loadChildren: () => import('./erstemannschaft/erstemannschaft.module').then( m => m.ErstemannschaftPageModule)
+  },
+  {
+    path: 'zweitemannschaft',
+    loadChildren: () => import('./zweitemannschaft/zweitemannschaft.module').then( m => m.ZweitemannschaftPageModule)
+  },
+  {
+    path: 'drittemannschaft',
+    loadChildren: () => import('./drittemannschaft/drittemannschaft.module').then( m => m.DrittemannschaftPageModule)
+  },
 ];
 @NgModule({
   imports: [

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
+import { DataService } from './data.service'
+
 import {HttpClientModule} from '@angular/common/http';
 import { HTTP } from '@ionic-native/http/ngx';
 
@@ -21,7 +23,7 @@ import { WebsitedataService } from './websitedata.service';
     StatusBar,
     HTTP,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, WebsitedataService
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, WebsitedataService, DataService
   ],
   bootstrap: [AppComponent]
 })

@@ -8,16 +8,22 @@
 </ion-header>
  
 <ion-content padding>
-
-  <ion-header collapse="condense">
+<ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">{{ data?.title.rendered }}</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-card *ngIf="data">
+    <ion-card-content [innerHTML]="data.content.rendered" padding class="ion-text-center">
+      
+    </ion-card-content>
+  </ion-card>
+
+  <!--
   
   <div *ngIf="data">
-    <!--<img [src]="data.media_url">-->
+    <!--<img [src]="data.media_url">
     <div [innerHTML]="data.content.rendered" padding class="ion-text-center"></div>
-  </div>
+  </div>-->
  
 </ion-content>

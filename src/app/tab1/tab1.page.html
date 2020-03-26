@@ -3,6 +3,10 @@
     <ion-title>
       Ergebnisse
     </ion-title>
+    <ion-chip (click)="presentAlertConfirm($async)">
+      <ion-icon name="information-circle-outline"></ion-icon>
+      <ion-label>Coronavirus</ion-label>
+    </ion-chip>
   </ion-toolbar>
 </ion-header>
 
@@ -25,7 +29,7 @@
         <h3 class="ion-text-center"> 
           {{ data.gHomeTeam }} <img class="img" [src]="data.gHomeImg" align="center">
           &nbsp;
-          <b>{{ data.gHomeGoals }} : {{ data.gGuestGoals }} </b>
+          <b >{{ data.gHomeGoals }} : {{ data.gGuestGoals }} </b>
           &nbsp;
           <img class="img" [src]="data.gGuestImg" align="center">  {{ data.gGuestTeam }} 
         </h3>

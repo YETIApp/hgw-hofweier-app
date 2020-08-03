@@ -1,4 +1,4 @@
-# hgw-hofweier-2
+# hgw-hofweier
 
 # Changelog
 All notable changes to this project will be documented in this file.

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service'
 import { Plugins } from '@capacitor/core';
 const { Browser } = Plugins;
+
 
 import { AlertController } from '@ionic/angular';
 
@@ -10,7 +11,8 @@ import { AlertController } from '@ionic/angular';
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit {
+  
 
   usersList:any[]=[]
   url = 'https://akhromieiev.com';

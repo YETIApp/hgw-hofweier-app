@@ -8,16 +8,40 @@
       <ion-label>Coronavirus</ion-label>
     </ion-chip>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment 
+    value="all" 
+    scrollable="true"
+    [(ngModel)]="segmentModel" >
+    <ion-segment-button value="1">
+      <ion-label>HGW I</ion-label>
+    </ion-segment-button>
+      <ion-segment-button value="2">
+        <ion-label>HGW II</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="3" >
+        <ion-label>HGW A</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="4" >
+        <ion-label>HGW B</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="5" >
+        <ion-label>HGW C</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Ergebnisse</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <!--1-->
+  <!--1
+  <div [ngSwitch]="type">-->
+    <ng-container *ngIf="segmentModel === '1'">
   <ion-list *ngFor="let data of usersList">
     <ion-item-divider sticky text-center center>
       <ion-label text-center> 
@@ -39,4 +63,15 @@
       </ion-label>
     </ion-item>
   </ion-list>
-</ion-content>
+</ng-container>  <!--</div>-->
+
+  <ng-container *ngIf="segmentModel === '2'">
+    Soon!
+  </ng-container> 
+
+<br>
+<div align="center">
+  Made with <span style="color: #e25555;">&#9829;</span> in Hofweier
+</div>
+<br>
+</ion-content >

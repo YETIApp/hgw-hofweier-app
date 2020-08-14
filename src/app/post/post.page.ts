@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { ToastController, LoadingController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 
+import { Plugins } from '@capacitor/core';
+const { AdMob } = Plugins;
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -24,7 +27,7 @@ export class PostPage {
   }
   async loadPost(url: string, page, showLoading) {
     const loading = await this.loadingController.create({
-      message: 'Loading Your posts'
+      message: 'News werden geladen!'
     });
     if (showLoading) {
       await loading.present();
@@ -99,5 +102,9 @@ export class PostPage {
 
   goToPostDetails(post) {
     this.Router.navigate([`post-details/${post.id}`]);
+  }
+
+  ngOnInit() {
+    AdMob.resumeBanner();
   }
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { Plugins } from '@capacitor/core';
+const { AdMob } = Plugins;
 
 @Component({
   selector: 'app-post-details',
@@ -25,6 +27,7 @@ export class PostDetailsPage implements OnInit {
 
 
   ngOnInit() {
+    AdMob.hideBanner();
   }
 
 }

@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Plugins } from '@capacitor/core';
 import { async } from '@angular/core/testing';
 
+const { AdMob } = Plugins;
+
 const { Browser } = Plugins;
 
 @Component({
@@ -14,6 +16,7 @@ export class ErstemannschaftPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    AdMob.hideBanner();
   }
 
 

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service'
 import { Plugins } from '@capacitor/core';
 const { Browser } = Plugins;
-
+import { AdOptions, AdSize, AdPosition } from '@capacitor-community/admob';
+const { AdMob } = Plugins;
 
 import { AlertController } from '@ionic/angular';
 
@@ -12,11 +13,35 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
-  
+
+  private options: AdOptions = {
+    adId:'ca-app-pub-6148593002584163/7855260590',
+    adSize: AdSize.BANNER,
+    position: AdPosition.BOTTOM_CENTER,
+    margin: 50,
+}
+
+segmentModel: string = "1";
 
   usersList:any[]=[]
   url = 'https://akhromieiev.com';
-  constructor(public dataService: DataService, public alertController: AlertController) {   }
+  constructor(public dataService: DataService, public alertController: AlertController) {  
+
+    
+
+    // Show Banner Ad
+    AdMob.showBanner(this.options);
+
+    // Subscibe Banner Event Listener
+    AdMob.addListener('onAdLoaded', (info: boolean) => {
+         console.log("Banner Ad Loaded");
+    });
+
+    // Get Banner Size
+    AdMob.addListener('onAdSize', (info: boolean) => {
+         console.log(info);
+    });
+   }
 
 
   async openURL(url) {
@@ -48,4 +73,6 @@ export class Tab1Page implements OnInit {
 
     await alert.present();
   }
+
+  
 }

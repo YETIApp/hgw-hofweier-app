@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WebsitedataService } from './websitedata.service';
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

@@ -4,6 +4,9 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { Plugins } from '@capacitor/core';
+const { AdMob } = Plugins;
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -11,6 +14,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+    AdMob.initialize();
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();

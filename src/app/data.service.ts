@@ -11,8 +11,13 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
 
-  getRemoteData(){
-    return this.http.get("https://hgw-hofweier.de/api/handballData.json");
+  getHGWData(){
+    return this.http.get("https://hgw-hofweier.de/api/handballData1.json");
+
+  }
+
+  getHGWData2(){
+    return this.http.get("https://hgw-hofweier.de/api/handballData2.json");
 
   }
 }

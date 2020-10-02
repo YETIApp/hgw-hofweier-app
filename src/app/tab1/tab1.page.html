@@ -25,9 +25,6 @@
       <ion-segment-button value="4" >
         <ion-label>HGW B</ion-label>
       </ion-segment-button>
-      <ion-segment-button value="5" >
-        <ion-label>HGW C</ion-label>
-      </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
@@ -45,7 +42,7 @@
   <ion-list *ngFor="let data of usersList">
     <ion-item-divider sticky text-center center>
       <ion-label text-center> 
-        <strong>{{ data.gDate }}</strong>
+        <strong>{{ data.gDate }} - {{ data.gTime }} Uhr</strong>
       </ion-label>
     </ion-item-divider>
     <ion-item>
@@ -66,6 +63,34 @@
 </ng-container>  <!--</div>-->
 
   <ng-container *ngIf="segmentModel === '2'">
+    <ion-list *ngFor="let data of usersList2">
+      <ion-item-divider sticky text-center center>
+        <ion-label text-center> 
+          <strong>{{ data.gDate }}</strong>
+        </ion-label>
+      </ion-item-divider>
+      <ion-item>
+        <ion-label text-center>
+          <h3 class="ion-text-center"> 
+            {{ data.gHomeTeam }} <img class="img" [src]="data.gHomeImg" align="center">
+            &nbsp;
+            <b >{{ data.gHomeGoals }} : {{ data.gGuestGoals }} </b>
+            &nbsp;
+            <img class="img" [src]="data.gGuestImg" align="center">  {{ data.gGuestTeam }} 
+          </h3>
+          <p class="ion-text-center">
+            {{ data.gGymnasiumName }} &mdash; <b>Südbadenliga</b>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+  
+  <ng-container *ngIf="segmentModel === '3'">
+    Soon!
+  </ng-container> 
+
+  <ng-container *ngIf="segmentModel === '4'">
     Soon!
   </ng-container> 
 

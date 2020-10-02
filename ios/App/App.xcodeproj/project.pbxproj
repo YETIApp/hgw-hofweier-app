@@ -15,6 +15,7 @@
 		504EC3121FED79650016851F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504EC3101FED79650016851F /* LaunchScreen.storyboard */; };
 		50B271D11FEDC1A000F3C39B /* public in Resources */ = {isa = PBXBuildFile; fileRef = 50B271D01FEDC1A000F3C39B /* public */; };
 		A084ECDBA7D38E1E42DFC39D /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF277DCFFFF123FFC6DF26C7 /* Pods_App.framework */; };
+		C056A935434B33CD40E6FC30 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8605D99F5D043ACFB1A7A50D /* Pods_OneSignalNotificationServiceExtension.framework */; };
 		D03012E224D5DAA4006AFF2D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03012E124D5DAA4006AFF2D /* SystemConfiguration.framework */; };
 		D03012E424D5DAA7006AFF2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03012E324D5DAA7006AFF2D /* UIKit.framework */; };
 		D03012E624D5DAC3006AFF2D /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03012E524D5DAC3006AFF2D /* OneSignal.framework */; };
@@ -88,6 +89,7 @@
 				D03012E624D5DAC3006AFF2D /* OneSignal.framework in Frameworks */,
 				D03012E424D5DAA7006AFF2D /* UIKit.framework in Frameworks */,
 				D03012E224D5DAA4006AFF2D /* SystemConfiguration.framework in Frameworks */,
+				C056A935434B33CD40E6FC30 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,12 +489,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.0.12;
+				CURRENT_PROJECT_VERSION = 0.0.15;
 				DEVELOPMENT_TEAM = HB2765Q28W;
 				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 0.0.12;
+				MARKETING_VERSION = 0.0.15;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = de.hgwhofweier.hgwhofweierapp;
 				PRODUCT_NAME = "HGW Hofweier";
@@ -510,12 +512,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.0.12;
+				CURRENT_PROJECT_VERSION = 0.0.15;
 				DEVELOPMENT_TEAM = HB2765Q28W;
 				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 0.0.12;
+				MARKETING_VERSION = 0.0.15;
 				PRODUCT_BUNDLE_IDENTIFIER = de.hgwhofweier.hgwhofweierapp;
 				PRODUCT_NAME = "HGW Hofweier";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = USE_PUSH;
@@ -532,7 +534,7 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.0.12;
+				CURRENT_PROJECT_VERSION = 0.0.15;
 				DEVELOPMENT_TEAM = HB2765Q28W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -541,7 +543,7 @@
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 0.0.12;
+				MARKETING_VERSION = 0.0.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = de.hgwhofweier.hgwhofweierapp.onesignal;
@@ -560,7 +562,7 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.0.12;
+				CURRENT_PROJECT_VERSION = 0.0.15;
 				DEVELOPMENT_TEAM = HB2765Q28W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -569,7 +571,7 @@
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 0.0.12;
+				MARKETING_VERSION = 0.0.15;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = de.hgwhofweier.hgwhofweierapp.onesignal;
 				PRODUCT_NAME = "$(TARGET_NAME)";

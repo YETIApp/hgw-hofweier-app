@@ -14,23 +14,24 @@ import { AlertController } from '@ionic/angular';
 })
 export class Tab1Page implements OnInit {
 
-  private options: AdOptions = {
-    adId:'ca-app-pub-6148593002584163/7855260590',
-    adSize: AdSize.BANNER,
-    position: AdPosition.BOTTOM_CENTER,
-    margin: 50,
-}
+  //private options: AdOptions = {
+    //adId:'ca-app-pub-6148593002584163/7855260590',
+    //adSize: AdSize.BANNER,
+   // position: AdPosition.BOTTOM_CENTER,
+  //  margin: 50,
+//}
 
 segmentModel: string = "1";
 
   usersList:any[]=[]
+  usersList2:any[]=[]
   url = 'https://akhromieiev.com';
   constructor(public dataService: DataService, public alertController: AlertController) {  
 
     
 
     // Show Banner Ad
-    AdMob.showBanner(this.options);
+    /*AdMob.showBanner(this.options);
 
     // Subscibe Banner Event Listener
     AdMob.addListener('onAdLoaded', (info: boolean) => {
@@ -40,7 +41,7 @@ segmentModel: string = "1";
     // Get Banner Size
     AdMob.addListener('onAdSize', (info: boolean) => {
          console.log(info);
-    });
+    });*/
    }
 
 
@@ -49,8 +50,13 @@ segmentModel: string = "1";
   }
 
   ngOnInit() {
-    this.dataService.getRemoteData().subscribe(data => {
+    this.dataService.getHGWData().subscribe(data => {
       this.usersList=data["dataList"];
+      console.log(data);
+    });
+
+    this.dataService.getHGWData2().subscribe(data => {
+      this.usersList2=data["dataList"];
       console.log(data);
     });
 
@@ -60,7 +66,7 @@ segmentModel: string = "1";
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
       header: 'Achtung!',
-      message: '<strong>Aufgrund des Coronavirus ist der Spiel- sowie Trainingsbetrieb auf unbestimmte Zeit ausgesetzt. Wir bitten dies zu entschuldigen.</strong>',
+      message: '<strong>Aufgrund des Coronavirus gelten verschärfte Hygienevorschriften. Wir bitten, diese zu beachten.</strong>',
       buttons: [
         {
           text: 'Okay',

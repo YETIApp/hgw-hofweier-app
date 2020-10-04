@@ -5,6 +5,8 @@ const { Browser } = Plugins;
 import { AdOptions, AdSize, AdPosition } from '@capacitor-community/admob';
 const { AdMob } = Plugins;
 
+import { HttpClient } from "@angular/common/http"
+
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -26,7 +28,7 @@ segmentModel: string = "1";
   usersList:any[]=[]
   usersList2:any[]=[]
   url = 'https://akhromieiev.com';
-  constructor(public dataService: DataService, public alertController: AlertController) {  
+  constructor(public dataService: DataService, public alertController: AlertController, private http: HttpClient) {  
 
     
 
@@ -50,12 +52,12 @@ segmentModel: string = "1";
   }
 
   ngOnInit() {
-    this.dataService.getHGWData().subscribe(data => {
+    this.getHGWData().subscribe(data => {
       this.usersList=data["dataList"];
       console.log(data);
     });
 
-    this.dataService.getHGWData2().subscribe(data => {
+    this.getHGWData2().subscribe(data => {
       this.usersList2=data["dataList"];
       console.log(data);
     });
@@ -78,6 +80,14 @@ segmentModel: string = "1";
     });
 
     await alert.present();
+  }
+  
+  getHGWData() {
+    return this.http.get("https://hgw-hofweier.de/api/hgw1.json");
+  }
+
+  getHGWData2() {
+    return this.http.get("https://hgw-hofweier.de/api/hgw2.json");
   }
 
   

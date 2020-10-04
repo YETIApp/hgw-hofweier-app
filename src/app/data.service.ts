@@ -12,12 +12,12 @@ export class DataService {
 
 
   getHGWData(){
-    return this.http.get("https://hgw-hofweier.de/api/handballData1.json");
+    return this.http.get("https://hgw-hofweier.de/api/hgw1.json");
 
   }
 
   getHGWData2(){
-    return this.http.get("https://hgw-hofweier.de/api/handballData2.json");
+    return this.http.get("https://hgw-hofweier.de/api/hgw2.json");
 
   }
 }

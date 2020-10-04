@@ -26,3 +26,5 @@ target 'App' do
     #only copy below line
     pod 'OneSignal', '>= 2.11.2', '< 3.0'
   end
+
+  

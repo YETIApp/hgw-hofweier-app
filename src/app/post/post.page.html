@@ -23,7 +23,7 @@
 <ion-card *ngFor="let item of items" (click)="goToPostDetails(item)" class="post-list"> 
   <img *ngIf="item.featured_image_urls && item.featured_image_urls.thumbnail"
           src="{{item.featured_image_urls.thumbnail}}">
-          <img *ngIf="!item.featured_image_urls || !item.featured_image_urls.thumbnail" src="/assets/bilder/herren1.jpg">
+          <img *ngIf="!item.featured_image_urls || !item.featured_image_urls.thumbnail" src="/assets/bilder/HGW-1.jpg">
     <ion-card-header ios hydrated header-translucent-ios>
       <!--<ion-card-subtitle>Card Subtitle</ion-card-subtitle>-->
       <ion-card-title><h2 class="ion-text-center" *ngIf="item.title && item.title.rendered" [innerHTML]="item.title.rendered"></h2></ion-card-title>

@@ -83,11 +83,11 @@ segmentModel: string = "1";
   }
   
   getHGWData() {
-    return this.http.get("https://hgw-hofweier.de/api/hgw1.json");
+    return this.http.get("https://raw.githubusercontent.com/YETIApp/api/master/hgw1.json");
   }
 
   getHGWData2() {
-    return this.http.get("https://hgw-hofweier.de/api/hgw2.json");
+    return this.http.get("https://raw.githubusercontent.com/YETIApp/api/master/hgw2.json");
   }
 
   

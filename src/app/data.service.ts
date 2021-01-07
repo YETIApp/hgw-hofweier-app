@@ -12,7 +12,7 @@ export class DataService {
 
 
   getHGWData(){
-    return this.http.get("https://hgw-hofweier.de/api/hgw1.json");
+    return this.http.get("https://212.227.8.128/api/hgw1.json");
 
   }
 

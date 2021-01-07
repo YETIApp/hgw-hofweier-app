@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ToastController, LoadingController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 
+import { HTTP } from '@ionic-native/http/ngx';
+
 import { Plugins } from '@capacitor/core';
 const { AdMob } = Plugins;
 

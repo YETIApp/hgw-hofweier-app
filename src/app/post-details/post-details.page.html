@@ -13,7 +13,9 @@
       <ion-title size="large">{{ data?.title.rendered }}</ion-title>
     </ion-toolbar>
   </ion-header>
+  
   <ion-card *ngIf="data">
+    <img src="{{data.jetpack_featured_media_url}}">
     <ion-card-content [innerHTML]="data.content.rendered" padding class="ion-text-center">
       
     </ion-card-content>

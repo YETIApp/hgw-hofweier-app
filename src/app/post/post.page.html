@@ -18,7 +18,6 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  
 
 <ion-card *ngFor="let item of items" (click)="goToPostDetails(item)" class="post-list"> 
   <img *ngIf="item.featured_image_urls && item.featured_image_urls.thumbnail"

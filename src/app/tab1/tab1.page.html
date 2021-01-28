@@ -18,13 +18,13 @@
     </ion-segment-button>
       <ion-segment-button value="2">
         <ion-label>HGW II</ion-label>
-      </ion-segment-button>
+      </ion-segment-button><!--
       <ion-segment-button value="3" >
         <ion-label>HGW A</ion-label>
       </ion-segment-button>
       <ion-segment-button value="4" >
         <ion-label>HGW B</ion-label>
-      </ion-segment-button>
+      </ion-segment-button>-->
     </ion-segment>
   </ion-toolbar>
 </ion-header>
@@ -50,7 +50,9 @@
         <h3 class="ion-text-center"> 
           {{ data.gHomeTeam }} <img class="img" [src]="data.gHomeImg" align="center">
           &nbsp;
-          <b >{{ data.gHomeGoals }} : {{ data.gGuestGoals }} </b>
+         
+            <b> {{ data.gHomeGoals }} : {{ data.gGuestGoals }} </b >
+          
           &nbsp;
           <img class="img" [src]="data.gGuestImg" align="center">  {{ data.gGuestTeam }} 
         </h3>
@@ -74,7 +76,7 @@
           <h3 class="ion-text-center"> 
             {{ data.gHomeTeam }} <img class="img" [src]="data.gHomeImg" align="center">
             &nbsp;
-            <b >{{ data.gHomeGoals }} : {{ data.gGuestGoals }} </b>
+            <b>{{ data.gHomeGoals }} : {{ data.gGuestGoals }} </b>
             &nbsp;
             <img class="img" [src]="data.gGuestImg" align="center">  {{ data.gGuestTeam }} 
           </h3>
@@ -86,13 +88,14 @@
     </ion-list>
   </ng-container>
   
+<!--
   <ng-container *ngIf="segmentModel === '3'">
     Soon!
   </ng-container> 
 
   <ng-container *ngIf="segmentModel === '4'">
     Soon!
-  </ng-container> 
+  </ng-container> -->  
 
 <br>
 <div align="center">

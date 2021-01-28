@@ -26,6 +26,14 @@ const routes: Routes = [
     path: 'drittemannschaft',
     loadChildren: () => import('./drittemannschaft/drittemannschaft.module').then( m => m.DrittemannschaftPageModule)
   },
+  {
+    path: 'uns',
+    loadChildren: () => import('./uns/uns.module').then( m => m.UnsPageModule)
+  },
+  {
+    path: 'vorstand',
+    loadChildren: () => import('./vorstand/vorstand.module').then( m => m.VorstandPageModule)
+  },
 ];
 @NgModule({
   imports: [

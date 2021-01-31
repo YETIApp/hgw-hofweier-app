@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Plugins } from '@capacitor/core';
+
+const { Browser } = Plugins;
+
+
 
 @Component({
   selector: 'app-uns',
@@ -11,5 +16,9 @@ export class UnsPage implements OnInit {
 
   ngOnInit() {
   }
+
+  openCapacitorSite = async () => {
+    await Browser.open({ url: 'https://hgw-hofweier.de/impressum' });
+  };
 
 }

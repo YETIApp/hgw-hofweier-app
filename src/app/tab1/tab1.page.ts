@@ -68,7 +68,7 @@ segmentModel: string = "1";
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
       header: 'Achtung!',
-      message: '<strong>Aufgrund des Coronavirus gelten verschärfte Hygienevorschriften. Wir bitten, diese zu beachten.</strong>',
+      message: '<strong>Aufgrund des Coronavirus ist der Spielbetrieb bis auf unbestimmt Zeit ausgesetzt.</strong>',
       buttons: [
         {
           text: 'Okay',
